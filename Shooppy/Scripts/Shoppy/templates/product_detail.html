@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load staticfiles %}
+	<meta charset="UTF-8">
+	<title>{{product.nombre}}</title>
+	<link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+	<h1>{{ product.nombre }}</h1>
+	<h2>{{ product.descripcion }}</h2>
+	<p>
+		{{ product.categoria }} |
+		{{ product.precio }}
+	</p>
+
+	<img src="{{ product.image.url }}" alt="">
+	<a href="{% url 'hola' %}">Volver</a>
+</body>
+</html>
